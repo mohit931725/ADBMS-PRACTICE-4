@@ -1,30 +1,17 @@
 # ADBMS-PRACTICE-4
-fee-payments-acid-demo
-This repository contains SQL scripts to demonstrate ACID properties (Atomicity, Consistency, Isolation, Durability) using a simple FeePayments table. Each part highlights how databases enforce these properties through transactions.
-
-📂 Files
-acid_fee_payments.sql – Complete SQL script containing:
-Table creation with constraints
-Transactions to demonstrate Atomicity, Consistency, Isolation, Durability
-Rollback examples
-Final verification query
-📝 Problem Breakdown
-✅ Part A – Insert Multiple Fee Payments
-Inserts 3 fee payment records inside a transaction.
-Demonstrates Atomicity & Durability (all inserts succeed, committed to DB).
-✅ Part B – Rollback on Failed Payment
-Inserts valid + invalid record (duplicate ID, negative amount).
-Entire transaction rolled back.
-Demonstrates Atomicity & Consistency.
-✅ Part C – Simulate Partial Failure
-Inserts one valid and one invalid record (NULL student name).
-Rollback ensures neither record is saved.
-Demonstrates all-or-none Atomicity.
-✅ Part D – Verify ACID Compliance
-Adds two valid records and commits.
-Consistency: Constraints remain valid.
-Isolation: Simulated by two sessions (uncommitted insert not visible to others).
-Durability: Committed records persist even after crash.
+PRACTICE 4.1 - Fee-payments-acid-demo 
 📊 Final Output
 Below is the final state of the FeePayments table after all parts:
 <img width="486" height="673" alt="image" src="https://github.com/user-attachments/assets/296375c0-675d-46c6-88dd-ff444d156605" />
+PRACTICE 4.2 - Student Enrollment Locking Demo
+📊 Final Output
+After executing all parts, the final state of the table is:
+<img width="512" height="406" alt="image" src="https://github.com/user-attachments/assets/e9d5f8c8-7221-495e-ac60-c59eee1d14be" />
+PRACTICE 4.3 - Transactions and Concurrency Control Demo
+📊 Outputs:
+Session 1 Output:
+<img width="503" height="460" alt="image" src="https://github.com/user-attachments/assets/206f6e60-702e-4dd7-898c-ae1663f4863c" />
+Session 2 Output:
+<img width="490" height="362" alt="image" src="https://github.com/user-attachments/assets/cab3f449-39e6-4257-9580-dbfc3424370d" />
+
+
